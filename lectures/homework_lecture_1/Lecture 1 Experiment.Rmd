@@ -1,0 +1,36 @@
+---
+title: "Lecture 1 Experiment"
+author: "Marcelo da Mata Oliveira"
+output: pdf_document
+---
+
+\section*{Introduction}
+In ophthalmology there are many tests that can perform in a non invasive way. In order to do that automatically we will use a smartphone to perform a psychophysical tests.
+
+We can control the intensity of a point in the screen of smartphone by absolute values, but we want this values in a standard measurement unit, wich is commonly used by professionals of this field.
+
+This report will describe how we made our experiment and show some results got.
+
+\section*{Method}
+We used a device called luximetry to get measurements of a point's intensities in the screen. In order to block the light from outside, we built a small paperboard box and we painted it inside with black color to minimize possible effects light reflectance.
+
+The point area painted in the screen was measured in 3 different sizes, with diameters of 300, 200 and 100 millimeters.
+
+\section*{Results}
+
+```{r}
+measurements <- read.csv2("C:/workspaces/ufrgs_4/SMPE/lectures/homework_lecture_1/Measurements.csv", 
+                          header = TRUE, sep = ";", quote="\"", dec=".",fill = TRUE)
+summary(measurements)
+```
+
+```{r, echo=FALSE}
+plot(measurements$X100mm, xlab="absolute", ylab="lux")
+title("100 mm", font.main=2, adj=1)
+plot(measurements$X200mm, xlab="absolute", ylab="lux")
+title("200 mm", font.main=2, adj=1)
+plot(measurements$X300mm, xlab="absolute", ylab="lux")
+title("300 mm", font.main=2, adj=1)
+```
+
+Note that, there are some differences in the relation between measurements from 300mm to 200mm and from 200mm to 100mm. In smaller diameters, the ratio between the max value and the value of equivalent intensity related for the index of the first intensity of the smallest point which the sensor could measure, was bigger in smaller points.

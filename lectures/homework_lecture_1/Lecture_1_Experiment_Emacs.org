@@ -1,0 +1,21 @@
+#+TITLE: Lecture 1 - Experiment
+#+AUTHOR: Marcelo da Mata Oliveira
+
+* Introduction
+ In ophthalmology there are many tests that can perform in a non invasive way. In order to do that automatically we will use a smartphone to perform a psychophysical tests.
+
+ We can control the intensity of a point in the screen of smartphone by absolute values, but we want this values in a standard measurement unit, wich is commonly used by professionals of this field.
+
+ This report will describe how we made our experiment and show some results got.
+
+* Method
+ We used a device called luximetry to get measurements of a point's intensities in the screen. In order to block the light from outside, we built a small paperboard box and we painted it inside with black color to minimize possible effects light reflectance.
+
+ The point area painted in the screen was measured in 3 different sizes, with diameters of 300, 200 and 100 millimeters.
+
+* Results
+ #+CAPTION: Relation lux x absolute
+ #+NAME:   Measurements of differents sizes 
+ [[./m100.png]]
+ [[./m200.png]]
+ [[./m300.png]]
