@@ -8,10 +8,7 @@ This is an R Markdown document. Markdown is a simple formatting syntax for autho
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
 ```{r}
-library(dplyr)
-library(ggplot2)
-library(reshape)
-df = read.csv("C:/workspaces/ufrgs_4/SMPE/lectures/lecture 2/set1.csv", header=T)
+df = read.csv("/home/aluno/Desktop/marcelo/set1.csv", header=T)
 head(df, n=2)
 summary(df)
 cleaner = melt(df)
